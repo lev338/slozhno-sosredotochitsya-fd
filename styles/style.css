@@ -2,4 +2,238 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--page-bg-image);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: var(--secondary-color);
+;
+}
+
+.header {
+  display: grid;
+  height: 100vh;
+  position: relative;
+  min-height: 668px;
+  padding: 10px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr min-content 1fr;
+  grid-template-areas: 
+    ". header__theme-menu"
+    "site-title site-title"
+    "header__title header__title";
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  grid-area: header__theme-menu;
+}
+
+.site-title {
+  grid-area: site-title;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 83%;
+  color: var(--site-text-color);
+}
+
+.header__title {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  grid-area: header__title;
+}
+
+.decorated-border::before,
+.decorated-border::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-color: var(--accent-color);
+  border-style: solid;
+  margin: 10px;
+}
+
+.decorated-border::after {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 1px 1px;
+}
+
+.decorated-border::before {
+  top: 0;
+  right: 0;
+  border-width: 1px 1px 0 0 ;
+}
+
+.decorated-rec {
+  position: absolute;
+  color: var(--accent-color);
+  top: 10px;
+  right: 38px;
+  font-weight: var(--font-weight-Regular);
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.decorated-rec::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: -18px;
+  width: 9px;
+  height: 9px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.section {
+  display: grid;
+  gap: 20px;
+  padding-inline: 10px;
+}
+
+.section:not(:last-child) {
+  margin-block-end: 50px;
+  margin-block-start: 40px;
+}
+
+.section-title {
+  color: var(--accent-color);
+}
+
+.card {
+  display: grid;
+  gap: 10px;
+}
+
+.card-text {
+  color: var(--card-text-color);
+  font-weight: var(--font-weight-Regular);
+}
+
+.card-link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.card-link:hover {
+  border-bottom: 1px solid var(--card-text-color);
+}
+
+.card-link:focus-visible {
+  outline: 1px solid var(--card-text-color);
+}
+
+.section__how-subtitle {
+  font-weight: var(--font-weight-Regular);
+}
+
+.section__gallery {
+  gap: 10px;
+}
+
+.gallery-item {
+  margin: 0;
+  display: grid;
+}
+
+.gallery-image {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  min-height: 668px;
+  margin-block-start: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-title {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+@media (width >= 768px) {
+  .header {
+    grid-template-areas: 
+    ". header__theme-menu"
+    "site-title site-title"
+    ". header__title";
+  }
+
+  .section:not(:last-child) {
+    margin-block-end: 80px;
+    margin-block-start: 60px;
+  }
+
+  .section__why {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .card-why {
+    grid-column-start: 2;
+  }
+
+  .section__what {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-what {
+    grid-column: 1 / -1;
+  }
+
+  .section__how {
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+  }
+
+  .card-how {
+    grid-column-start: 2;
+  }
+
+  .section__gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content) max-content;
+    grid-auto-flow: dense;
+  }
+
+  .title-gallery {
+    grid-column: 1 / -1;
+  }
+
+  .image-sunset {
+    grid-column: 1 / 3;
+  }
+
+  .image-ice-cream {
+    object-fit: cover;
+    grid-column: 3;
+    grid-row: 2 / 4;
+  }
+
+  .image-tape {
+    grid-column: 1;
+    grid-row: 3 / 5;
+  }
+
+  .image-street {
+    grid-column: 2 / 4;
+  }
+}
+
+@media (width >= 1024px) {
+
 }
