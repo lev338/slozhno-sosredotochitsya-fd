@@ -9,4 +9,14 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --pink: #FF0070;
+  --page-bg-image: url(../images/cover-image-dark.png);
+  --accent-color: var(--pink);
+  --secondary-color: #000028;
+  --color-text: #000028;
+  --section-color-title: var(--pink);
+  --site-text-color: #DB00FF;
+  --card-text-color: #F1B2CE;
+  --decorated-border-color: var(--pink);
+  --button-color: var(--pink);
 }

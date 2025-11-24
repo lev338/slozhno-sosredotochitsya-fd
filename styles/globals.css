@@ -24,7 +24,7 @@ p {
   font-weight: var(--font-weight-Bold);
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--secondary-color);
+  color: var(--color-text);
 }
 
 ul {

@@ -9,4 +9,48 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --grey: #353430;
+  --page-bg-image: url(images\cover-image-light.png);
+  --accent-color: #FF8DCB;
+  --secondary-color: #FFF1F7;
+  --color-text: var(--grey);
+  --section-color-title: var(--grey);
+  --site-text-color: #FFC2E6;
+  --card-text-color: var(--grey);
+  --footer-title-text-shadow: #FF0070;
+  --decorated-border-color: var(--grey);
+  --button-color: var(--grey);
+  
+.decorated-border::before,
+.decorated-border::after {
+  border-color: var(--decorated-border-color);
 }
+
+.decorated-rec {
+  visibility: hidden;
+}
+
+.header__theme-menu-item:hover {
+  outline: 1px solid rgba(50, 49, 45, 0.4);
+}
+
+.footer-title {
+  text-shadow: 2px 2px 0 var(--footer-title-text-shadow);
+}
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+  --grey: #353430;
+  --page-bg-image: url(images\cover-image-light.png);
+  --accent-color: #FF8DCB;
+  --secondary-color: #FFF1F7;
+  --color-text: var(--grey);
+  --section-color-title: var(--grey);
+  --site-text-color: #FFC2E6;
+  --card-text-color: var(--grey);
+  --footer-title-text-shadow: #FF0070;
+  --decorated-border-color: var(--grey);
+  --button-color: var(--grey);
+  }
+} 
