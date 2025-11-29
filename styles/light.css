@@ -20,18 +20,9 @@
   --footer-title-text-shadow: #FF0070;
   --decorated-border-color: var(--grey);
   --button-color: var(--grey);
-  
-.decorated-border::before,
-.decorated-border::after {
-  border-color: var(--decorated-border-color);
-}
 
 .decorated-rec {
   visibility: hidden;
-}
-
-.header__theme-menu-item:hover {
-  outline: 1px solid rgba(50, 49, 45, 0.4);
 }
 
 .footer-title {
@@ -52,5 +43,13 @@
   --footer-title-text-shadow: #FF0070;
   --decorated-border-color: var(--grey);
   --button-color: var(--grey);
+  }
+
+  .decorated-rec {
+  visibility: hidden;
+  }
+
+  .footer-title {
+  text-shadow: 2px 2px 0 var(--footer-title-text-shadow);
   }
 } 

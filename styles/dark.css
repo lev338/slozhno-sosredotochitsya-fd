@@ -19,4 +19,33 @@
   --card-text-color: #F1B2CE;
   --decorated-border-color: var(--pink);
   --button-color: var(--pink);
-}
+
+  .decorated-rec {
+  position: absolute;
+  top: 10px;
+  right: 38px;
+  color: var(--accent-color);
+  font-weight: var(--font-weight-Regular);
+  font-size: 18px;
+  line-height: 25px;
+  }
+
+.decorated-rec::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: -18px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+  }
+
+  @media (width >= 768px) {
+    .decorated-rec {
+    top: 20px;
+    right: 48px;
+  }
+  }
+  }

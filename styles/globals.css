@@ -21,7 +21,7 @@ h6,
 p {
   margin: 0;
   color: var(--color-text);
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   font-weight: var(--font-weight-Bold);
   font-size: 18px;
   line-height: 23.4px;

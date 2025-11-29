@@ -50,8 +50,8 @@
   align-items: center;
 }
 
-.decorated-border::before,
-.decorated-border::after {
+.decorated-zone::before,
+.decorated-zone::after {
   content: "";
   position: absolute;
   width: 25px;
@@ -61,13 +61,13 @@
   border-color: var(--decorated-border-color);
 }
 
-.decorated-border::after {
+.decorated-zone::after {
   bottom: 0;
   left: 0;
   border-width: 0 0 1px 1px;
 }
 
-.decorated-border::before {
+.decorated-zone::before {
   top: 0;
   right: 0;
   border-width: 1px 1px 0 0 ;
@@ -100,12 +100,13 @@
   min-height: 26px;
   border: 0;
   color: var(--button-color);
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   font-weight: var(--font-weight-Regular);
   font-size: 18px;
   line-height: 18px;
   text-transform: lowercase;
   background-color: transparent;
+  transition: all 1s;
 }
 
 .header__theme-menu-list {
@@ -113,8 +114,8 @@
   gap: 10px;
 }
 
-.header__theme-menu-item:hover {
-  outline: 1px solid rgba(255, 0, 112, 0.4);
+.header__theme-menu-button:hover {
+  outline: 1px solid;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -127,18 +128,16 @@
   pointer-events: none;
 }
 
+.body {
+  display: grid;
+  gap: 50px;
+  padding-block-start: 40px;
+}
+
 .section {
   display: grid;
   gap: 20px;
   padding-inline: 10px;
-}
-
-.first-section {
-  margin-block-start: 40px;
-}
-
-.section:not(.first-section) {
-  margin-block-start: 50px;
 }
 
 .section-title {
@@ -160,6 +159,11 @@
   gap: 20px;
 }
 
+.card-list-how {
+  display: grid;
+  gap: 20px;
+}
+
 .card {
   display: grid;
   align-items: start;
@@ -174,6 +178,7 @@
 .card-link {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-color);
+  transition: all 1s;
 }
 
 .card-link:hover {
@@ -231,8 +236,8 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-  .decorated-border::before,
-  .decorated-border::after {
+  .decorated-zone::before,
+  .decorated-zone::after {
     margin: 20px;
   }
 
@@ -241,16 +246,13 @@
     right: 48px;
   }
 
+  .body {
+    gap: 80px;
+    padding-block-start: 60px;
+  }
+
   .section {
     padding-inline: 20px;
-  }
-
-  .first-section {
-    margin-block-start: 60px;
-  }
-
-  .section:not(.first-section) {
-    margin-block-start: 80px;
   }
 
   .section__why {
@@ -271,10 +273,6 @@
 
   .section__how {
     grid-template-columns: 1fr 2fr;
-  }
-
-  .section__how-card {
-    display: grid;
   }
 
   .section__gallery {
@@ -318,7 +316,6 @@
 
 @media (width >= 1024px) {
   .header__theme-menu {
-    display: flex;
     justify-content: center;
     align-items: start;
   }
