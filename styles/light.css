@@ -10,7 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --grey: #353430;
-  --page-bg-image: url(images\cover-image-light.png);
+  --page-bg-image: url(../images/cover-image-light.png);
   --accent-color: #FF8DCB;
   --secondary-color: #FFF1F7;
   --color-text: var(--grey);
@@ -20,6 +20,7 @@
   --footer-title-text-shadow: #FF0070;
   --decorated-border-color: var(--grey);
   --button-color: var(--grey);
+  --header-button-outline-color: rgba(50, 49, 45, 0.4);
 
 .decorated-rec {
   visibility: hidden;
@@ -33,7 +34,7 @@
 @media (prefers-color-scheme: light) {
   :root {
   --grey: #353430;
-  --page-bg-image: url(images\cover-image-light.png);
+  --page-bg-image: url(../images/cover-image-light.png);
   --accent-color: #FF8DCB;
   --secondary-color: #FFF1F7;
   --color-text: var(--grey);
@@ -43,6 +44,7 @@
   --footer-title-text-shadow: #FF0070;
   --decorated-border-color: var(--grey);
   --button-color: var(--grey);
+  --header-button-outline-color: rgba(50, 49, 45, 0.4);
   }
 
   .decorated-rec {

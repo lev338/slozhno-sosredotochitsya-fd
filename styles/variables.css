@@ -15,4 +15,5 @@
   --button-color: var(--pink);
   --font-weight-Bold: 700;
   --font-weight-Regular: 400;
+  --header-button-outline-color: rgba(255, 0, 112, 0.4);
 }
